@@ -1,0 +1,169 @@
+#aside-content #card-toc .toc-content .toc-link.active {
+    border-radius: 15px;
+    background-color: var(--btn-bg);
+}
+
+.relatedPosts>.relatedPosts-list>div {
+    border-radius: 15px;
+    border: solid 3px #fff;
+}
+
+.relatedPosts>.relatedPosts-list>div:hover {
+    border: solid 3px var(--btn-bg);
+}
+
+nav#pagination.pagination-post {
+    border-radius: 25px;
+}
+
+:root {
+    --btn-bg: #70a1ff;
+}
+
+#pagination .page-number.current {
+    background-color: var(--btn-bg);
+}
+
+hr {
+    border: 2px dashed var(--btn-bg);
+}
+
+hr:before {
+    color: var(--btn-bg);
+}
+
+.xk-card {
+    border: solid 3px #fff;
+}
+
+.xk-card:hover {
+    border: solid 3px var(--btn-bg);
+}
+
+#pagination .page-number.current {
+    border-radius: 8px;
+}
+
+#aside-content .card-widget,
+#recent-posts>.recent-post-item,
+.cardHover,
+.error404 #error-wrap .error-content,
+.layout>div:first-child:not(.recent-posts) {
+    border: solid 2px #fff;
+}
+
+#aside-content .card-widget:hover,
+#recent-posts>.recent-post-item:hover,
+.cardHover:hover,
+.error404 #error-wrap .error-content:hover,
+.layout>div:first-child:not(.recent-posts):hover {
+    border: solid 2px var(--btn-bg);
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+    /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left: 0 !important;
+    /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+}
+
+# aside-content .card-info>div:first-child {
+    background: url('https://markdown-img-1303371957.cos.ap-nanjing.myqcloud.com/dora/201704_C.png');
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a:hover,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a:hover {
+    border-radius: 20px;
+    background-color: var(--btn-bg);
+}
+
+.demo_dibu {
+    border-radius: 50%;
+    position: relative;
+    top: 0.5em;
+}
+
+.demo_bi {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 2.5em;
+}
+
+.article-sort-item:before {
+    border: 3px solid var(--btn-bg);
+}
+
+.article-sort-title:before {
+    border: 6px solid var(--btn-bg);
+}
+
+.category-lists ul li:before,
+.list-beauty li:before {
+    border: .215em solid var(--btn-bg);
+}
+
+#post .tag_share .post-meta__tags {
+    border: 1px solid var(--btn-bg);
+    color: var(--btn-bg);
+}
+
+#post .tag_share .post-meta__tags:hover {
+    border: 1px solid var(--btn-bg);
+    color: #fff;
+    background-color: var(--btn-bg);
+}
+
+.aplayer.aplayer-withlrc .aplayer-pic {
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: solid 4px var(--btn-bg);
+}
+
+
+#article-container h1:before,
+#article-container h2:before,
+#article-container h3:before,
+#article-container h4:before,
+#article-container h5:before,
+#article-container h6:before {
+    color: var(--btn-bg);
+}
+
+
+.article-sort-item {
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: solid 3px #fff;
+}
+
+.article-sort-item:hover {
+    border: solid 3px var(--btn-bg);
+}
+
+.article-sort-item-img img {
+    border-radius: 20px;
+}
+
+.thumbnail {
+    border-radius: 15px;
+}
+
+div#bbTimeList {
+    border: solid 3px #fff;
+}
+
+div#bbTimeList:hover {
+    border: solid 3px var(--btn-bg);
+}
+
+.hide-inline>.hide-button {
+    border-radius: 25px;
+}

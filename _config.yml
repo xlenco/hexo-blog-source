@@ -1,0 +1,260 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Xlenco
+subtitle: 
+description: Xlenco的博客
+keywords:
+author: Xlenco
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://nicexl.eu.org
+root: /
+# permalink: :year/:month/:day/:title/
+# permalink_defaults:
+permalink: s/:abbrlink/
+abbrlink:
+  alg: crc16 #support crc16(default) and crc32
+  rep: hex   #support dec(default) and hex
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: butterfly
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: 
+	      github: git@github.com:xlenco/hexo.git
+  branch: main
+
+# hexo-neat
+# md博文压缩
+neat_enable: false
+# 压缩html（ejs，swig等也属于html格式片段）
+neat_html:
+  enable: false
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+    - '**/*.min.css'
+    - 'jquery.fancybox.min.css'
+    - '**/live2d-widget/waifu.css'
+ 
+
+    
+
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true #打印日志
+  output:
+  compress:
+  exclude: #排除文件
+    - '*.min.js'
+    - '**/*.min.js'
+    - 'jquery.fancybox.min.js'
+    - '**/live2d-widget/*.js'
+    - '**/live2d-widget/*.min.js'
+# Ice Kano Plus_in
+# Hexo Github Canlendar
+# Author: Ice Kano
+githubcalendar:
+  enable: true
+  enable_page: /
+  user: xlenco
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  githubcalendar_html: '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>'
+  pc_minheight: 280px
+  mobile_minheight: 0px
+  color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']"
+  api: https://calendar-api-mu.vercel.app/api
+  # api: https://python-gitee-calendar-api.vercel.app/api
+  calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js
+  plus_style: ""
+# hexo-electric-clock
+electric_clock:
+  priority: 5
+  enable: true
+  enable_page: all
+  layout:
+    type: class
+    name: sticky_layout
+    index: 0
+  temple_html: '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://ik.imagekit.io/nicexl/loading_Nxe_XduJU.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>'
+# artitalk see https://artitalk.js.org/
+# hexo-butterfly-artitalk-pro
+# see https://akilar.top/posts/f1004b1d/
+artitalk:
+  enable:
+    card: true # 侧边栏开关
+    page: true #页面开关
+  # 侧栏相关配置项
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  # 页面相关配置项
+  path: artitalk
+  front_matter:
+    title: 说说
+  # 公共配置项
+  appId: CVLwrCkInSwVzAk7dg8PKGrD-MdYXbMMI
+  appKey: rVMF9CErbxRU7B85ezFQoEGj
+  exclude:
+    - /artitalk/
+    - /posts/ #需要abbrlink插件支持
+  js: https://npm.elemecdn.com/artitalk
+  card_css: https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css
+  card_visual_js: https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js
+  option:
+    serverURL: https://cvlwrcki.api.lncldglobal.com #将此处的********替换为你的appId前八位
+    lang: zh
+    pageSize: 1
+    color1: '#49b1f5'
+    color2: '#00c4b6'
+    atEmoji: {
+      'Mafumafu1':'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png',
+      'Mafumafu2':'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png'}
+aplayer:
+  meting: true
+  asset_inject: false
+# hexo-generator-sitemap
+## https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+ # template: ./sitemap_template.xml
+  rel: true
+  tags: false
+  categories: false
+nofollow:
+  enable: true
+  field: site
+  exclude: false
+   
+algolia:
+  appId: "CE9M4IN0HW"
+  apiKey: "1752a7306752d7764efbad19f907367b"
+  adminApiKey: "837e620106579ed41c094194f2dc9d06"
+  chunkSize: 5000
+  indexName: "my-hexo-blog"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
+
+# hexo-butterfly-categories-card
+# see https://akilar.top/posts/a9131002/
+categoryBar:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  column: odd # odd：3列 | even：4列
+  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
+  message:
+    - descr: 
+      cover: https://npm.elemecdn.com/akilar-candyassets/image/cover1.webp
+    - descr: 
+      cover: https://npm.elemecdn.com/akilar-candyassets/image/cover2.webp
+    - descr: 
+      cover: https://npm.elemecdn.com/akilar-candyassets/image/cover3.webp
+    - descr: 
+      cover: https://npm.elemecdn.com/akilar-candyassets/image/cover4.webp
+    - descr: 
+      cover: https://npm.elemecdn.com/akilar-candyassets/image/cover5.webp
+    - descr: 
+      cover: https://npm.elemecdn.com/akilar-candyassets/image/cover6.webp
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
+
+# hexo-butterfly-swiper
+# see https://akilar.top/posts/8e1264d1/
+swiper:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  timemode: date #date/updated
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  default_descr: 再怎么看我也不知道怎么描述它的啦！
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
+  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法

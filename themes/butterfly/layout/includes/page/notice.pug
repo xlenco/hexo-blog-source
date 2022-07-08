@@ -1,0 +1,11 @@
+#article-container
+  h1= _p('aside.card_announcement') 
+  .timeline.notice
+    if site.data.notice
+      each i in site.data.notice
+        .timeline-item
+          .timeline-item-title
+            .item-circle
+              p!=i.date
+          .timeline-item-content
+            p!=i.msg
